@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px;
+    height: 400px; /* Tinggi chart */
+    border: 1px solid #ccc;
+}body {  
+  background: white;
+  padding: 16px;
+}
+
+canvas {
+  border: 1px dotted red;
+}
+
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 75vh;
+  width: 75vw;
+}
+
+.judul {
+ margin: auto;
+  width: 70%;
+  text-align: center;
+  //border: 3px solid green;
+  padding: 5px;
+}
+
+.judul2 {
+ margin: auto;
+  width: 70%;
+  text-align: center;
+  //border: 3px solid green;
+  padding: 150px;
+}
+
+/* Gaya untuk dropdown */
+#dropdown {
+  font-size: 20px; /* Anda dapat menyesuaikan ukuran font */
+  padding: 0.5em; /* Padding untuk menjaga tampilan tetap baik */
+  width: 70%; /* Lebar dropdown, Anda dapat menyesuaikan sesuai kebutuhan */
+}
