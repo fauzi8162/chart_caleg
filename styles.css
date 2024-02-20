@@ -4,16 +4,30 @@ body {
     padding: 0;
 }
 
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
+
+.container1 {
+	max-width: 1000px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+ }
+	  
 .chart {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin: 20px;
-    height: 400px; /* Tinggi chart */
+    /*height: 400px; /* Tinggi chart */
+    width: 80%; 
     border: 1px solid #ccc;
-}body {  
-  background: white;
-  padding: 16px;
 }
 
 canvas {
@@ -27,25 +41,36 @@ canvas {
   width: 75vw;
 }
 
-.judul {
- margin: auto;
-  width: 70%;
-  text-align: center;
-  //border: 3px solid green;
-  padding: 5px;
-}
-
-.judul2 {
- margin: auto;
-  width: 70%;
-  text-align: center;
-  //border: 3px solid green;
-  padding: 150px;
-}
-
 /* Gaya untuk dropdown */
 #dropdown {
-  font-size: 20px; /* Anda dapat menyesuaikan ukuran font */
-  padding: 0.5em; /* Padding untuk menjaga tampilan tetap baik */
-  width: 70%; /* Lebar dropdown, Anda dapat menyesuaikan sesuai kebutuhan */
+	text-align: center;
+	font-size: 15px; /* Anda dapat menyesuaikan ukuran font */
+	padding: 0.5em; /* Padding untuk menjaga tampilan tetap baik */
+	width: 90%; /* Lebar dropdown, Anda dapat menyesuaikan sesuai kebutuhan */
+}
+
+
+
+
+footer {
+	margin-top: 20px;
+	text-align: center;
+	padding: 10px;
+	background-color: #f2f2f2;
+}
+
+  /* Menambahkan gaya untuk tautan */
+footer a {
+	color: inherit;
+	/* Pewarisan warna teks dari elemen induk */
+	text-decoration: none;
+	/* Menghilangkan dekorasi tautan (seperti garis bawah) */
+	cursor: pointer;
+	/* Menunjukkan kursor pointer ketika diarahkan ke tautan */
+}
+
+/* Gaya untuk mengubah tampilan tautan saat dihover (opsional) */
+footer a:hover {
+	opacity: 0.8;
+	/* Mengurangi kecerahan tautan saat dihover */
 }

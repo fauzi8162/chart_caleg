@@ -1,34 +1,38 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RealCount KPU by RIOZI_25</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div class="judul">
-<h1>REAL COUNT KPU</h1>
-<h2>Perolehan Suara DAPIL 3 Indramayu PEMILU 2024</h2>
+  </head>
+  <body>
+	<header>
+		<h1>REAL COUNT KPU</h1>
+		<h2>Perolehan Suara DAPIL 3 Indramayu PEMILU 2024</h2>
+		<h4>sumber data : pemilu2024.kpu.go.id</h4>
+	</header>
+<div class="container1">
 <select id="dropdown"></select>
-<h3>sumber data : pemilu2024.kpu.go.id</h3>
 </div>
+
 <div class="chart-container">
-
-<p id= 'latestUpdate'>DATA SEDANG DIPROSES. . . . . . . .</p>
-<p id= 'latestProgress'></p>
-<p id= 'suaraPartai'></p>
-<p id= 'suaraPartaiNCaleg'></p>
-
-
-    <canvas id="chart"></canvas>
-</div>
-
-<div class="judul2">
-<p>by <a href="https://instagram.com/riozi_25" target="_blank">riozi_25</a></p>
+	<p id= 'latestUpdate'>DATA SEDANG DIPROSES. . . . . . . .</p>
+	<p id= 'latestProgress'></p>
+	<p id= 'suaraPartai'></p>
+	<p id= 'suaraPartaiNCaleg'></p>
+	<br>
+	<p id= 'klikBagan'></p>
+	<canvas id="chart"></canvas>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="script.js"></script>
+
+<footer id="footer">
+      <p>by <a href="https://instagram.com/riozi_25" target="_blank">riozi_25</a>
+      </p>
+    </footer>
 </body>
 </html>

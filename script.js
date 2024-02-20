@@ -44,6 +44,11 @@ let options = {
                 display: false
             }
         }
+    },
+	 plugins: {
+        legend: {
+            display: false
+        }
     }
 };
 let bDropDown = false;
@@ -115,17 +120,18 @@ function filiterAllData() {
 
     let teks1 = 'Jumlah Suara Sah Partai Politik';
     let teks2 = dataPerolehan.table[onPartai].jml_suara_partai;
-    document.getElementById('suaraPartai').innerHTML = teks1.padEnd(50, '\xa0') + " : " + addTitikRibuan(teks2);
+    document.getElementById('suaraPartai').innerHTML = teks1 + " : " + addTitikRibuan(teks2);
     teks1 = 'Jumlah Suara Sah Partai Politik dan Calon';
     teks2 = dataPerolehan.table[onPartai].jml_suara_total;
-    document.getElementById('suaraPartaiNCaleg').innerHTML = teks1.padEnd(43, '\xa0') + " : " + addTitikRibuan(teks2);
+    document.getElementById('suaraPartaiNCaleg').innerHTML = teks1 + " : " + addTitikRibuan(teks2);
+    document.getElementById('klikBagan').innerHTML = "<i>klik pada bagan untuk melihat perolehan suara</i>";
 
-    document.getElementById('latestUpdate').innerHTML = ("Update Data").padEnd(60, '\xa0') + " : " + dataPerolehan["ts"];
+    document.getElementById('latestUpdate').innerHTML = ("Update Data") + " : " + dataPerolehan["ts"];
 
     let doneTPS = dataPerolehan["progres"].progres;
     let allTPS = dataPerolehan["progres"].total;
     let persenProg = doneTPS / allTPS * 100;
-    document.getElementById('latestProgress').innerHTML = ("Progres").padEnd(64, '\xa0') + " : " + doneTPS + " dari " + allTPS + " (" + persenProg.toFixed(2) + "%)";
+    document.getElementById('latestProgress').innerHTML = ("Progres") + " : " + doneTPS + " dari " + allTPS + " <b>(" + persenProg.toFixed(2) + "%)</b>";
 
 
     //
@@ -147,6 +153,9 @@ function filiterAllData() {
     }
     //create Chart
     buildTheChart();
+	
+	let panjangCanvas = document.getElementById('chart').height;
+document.getElementById('footer').style.marginTop = (panjangCanvas/3) + "px";
 }
 
 // event if dropdown change
@@ -162,3 +171,5 @@ function setPartai(evt) {
 function addTitikRibuan(angka) {
     return angka.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
+
+///
